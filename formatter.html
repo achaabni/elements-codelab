@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 16px;
+      box-sizing: border-box;  
+      font-family: sans-serif;
+    }
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      height: 500px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Input</h1>
+  <textarea id="input" cols="30" rows="10"></textarea>
+  <h1>Output</h1>
+  <textarea id="output" cols="30" rows="10"></textarea>
+
+  <script>
+    const input = document.querySelector('#input');
+    const output = document.querySelector('#output');
+
+    [input, output].forEach(el => el.addEventListener('focus', (e) => e.target.select()));
+
+    input.addEventListener('input', (e) => {
+      output.value = input.value
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+      // .replace(/\[/g, '&#91;')
+      // .replace(/\]/g, '&#93;')
+      // .replace(/{/g, '&#123;')
+      // .replace(/}/g, '&#125;')
+
+    });
+  </script>
+</body>
+
+</html>
