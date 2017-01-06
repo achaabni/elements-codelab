@@ -1,10 +1,10 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "start_url": "/?homescreen=1",
+  "name": "Vaadin Elements Codelab",
+  "short_name": "Elments Lab",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#3f51b5",
-  "background_color": "#3f51b5",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
